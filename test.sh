@@ -1,4 +1,4 @@
-#HOST="13.231.237.28"
+
 HOST="localhost"
 KEY="a6c4e2afa869049fc560dc595ee255f3d0fbf2ee"
 target_json=`curl -s http://${HOST}/issues.json?issue_id=${1}&key=${KEY}`
