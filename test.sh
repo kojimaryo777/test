@@ -2,6 +2,8 @@
 HOST="localhost"
 KEY="a6c4e2afa869049fc560dc595ee255f3d0fbf2ee"
 
+
+
 #対象のアカウントIssue_idが所属するプロジェクトIDの取得を行う
 target_json=`curl -s http://${HOST}/issues/${1}.json?key=${KEY}`
 
@@ -24,7 +26,7 @@ while true; do
   parent_id_array=(`echo ${target_json} | jq '.issues[] | select(.parent.id !=null and .status.id != '${status_id}') | .parent.id'`)
 
   c_flg=""
-  echo 削除対象チケット：${target_id_array[@]}
+  echo 変更対象チケット：${target_id_array[@]}
   echo 依存関係チケットリスト：${parent_id_array[@]}
 
   if [ ${#parent_id_array[@]} -eq 0 ]; then
