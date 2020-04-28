@@ -2,7 +2,7 @@
 HOST="localhost"
 KEY="a6c4e2afa869049fc560dc595ee255f3d0fbf2ee"
 
-
+#aaaa
 
 #対象のアカウントIssue_idが所属するプロジェクトIDの取得を行う
 target_json=`curl -s http://${HOST}/issues/${1}.json?key=${KEY}`
